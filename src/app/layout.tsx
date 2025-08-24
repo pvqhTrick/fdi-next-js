@@ -5,7 +5,10 @@ import Script from 'next/script';
 import '../style.scss';
 import '../tailwind.css';
 import rootMetadata from './metadata';
-import ProviderRoot from './provider';
+
+// Import MainHeader
+import { AboutSection } from '@/shared/components/templates/AboutSection';
+import { MainHeader } from '@/shared/components/templates/MainHeader';
 
 export const metadata: Metadata = rootMetadata;
 
@@ -41,9 +44,24 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       </head>
       <body>
         <NextIntlClientProvider>
-          <ProviderRoot>{children}</ProviderRoot>
+          <MainHeader
+            logoSrc="/assets/images/img-logo.png"
+            bannerTitle="Lorem ipsum dolor sit amet"
+            bannerSubtitle="Welcome to Lorem ipsum."
+            bannerBtnLabel="Lorem ipsum"
+            navItems={[
+              { label: 'Home', links: [{ label: 'Lorem ipsum', href: '#' }] },
+              { label: 'About', links: [{ label: 'Lorem ipsum', href: '#' }] },
+              { label: 'Services', links: [{ label: 'Lorem ipsum', href: '#' }] },
+              { label: 'Projects', links: [{ label: 'Lorem ipsum', href: '#' }] },
+              { label: 'Blog', links: [{ label: 'Lorem ipsum', href: '#' }] },
+              { label: 'Contact', links: [{ label: 'Lorem ipsum', href: '#' }] },
+            ]}
+          />
+
+          <AboutSection></AboutSection>
+          {/* <ProviderRoot>{children}</ProviderRoot> Boc auth de login*/}
         </NextIntlClientProvider>
-        {/* Load scripts client-side using Next.js Script component */}
         <Script src="/assets/library/imask/imask.min.js" strategy="afterInteractive" />
         <Script src="/assets/library/glightbox/glightbox.min.js" strategy="afterInteractive" />
       </body>

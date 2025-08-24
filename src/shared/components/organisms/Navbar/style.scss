@@ -1,0 +1,36 @@
+@reference "../../../../tailwind.css";
+
+.navbar {
+  @apply absolute top-0 left-0 z-50 m-0 flex h-32 w-full border-none bg-transparent p-0;
+
+  .navbar-inner {
+    @apply mx-auto flex w-full max-w-[1220px] items-center justify-between text-inherit;
+
+    .logo-wrapper {
+      @apply float-left;
+      .logo img {
+        @apply mb-0 h-auto w-[190px] max-w-fit;
+      }
+    }
+  }
+
+  .menu {
+    @apply flex flex-1 items-center;
+
+    .nav-links {
+      @apply mx-auto flex flex-row;
+    }
+
+    .nav-right {
+      @apply relative flex items-center;
+
+      a {
+        @apply text-base-0 hover:bg-primary-500 relative z-10 flex items-center rounded-full border border-[#895CF0] bg-transparent px-5 py-1 text-4xl font-normal transition-all duration-400;
+      }
+    }
+  }
+
+  .menu-toggle {
+    @apply text-base-0 text-3xl lg:hidden;
+  }
+}

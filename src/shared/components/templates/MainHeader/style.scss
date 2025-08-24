@@ -1,0 +1,4 @@
+@reference "../../../../tailwind.css";
+header {
+  @apply relative flex h-screen w-full items-center justify-center;
+}

@@ -1,0 +1,33 @@
+@reference "../../../../tailwind.css";
+
+.banner-header__bg {
+  @apply absolute inset-0 bg-cover bg-fixed bg-center;
+  background-image: url('/assets/images/banner.jpg');
+}
+.container {
+  @apply relative z-10 mx-auto max-w-3xl px-4 text-center;
+
+  .banner-header__content {
+    @apply text-base-0 mx-auto max-w-2xl;
+    > h6 {
+      @apply mb-2 flex items-center justify-center gap-2 text-sm font-semibold tracking-wider uppercase md:text-base;
+    }
+    > h1 {
+      @apply mb-4 text-4xl leading-tight font-bold;
+      span {
+        @apply text-primary-500;
+      }
+    }
+  }
+}
+
+.banner-header__content {
+  @apply mx-auto max-w-2xl text-white;
+}
+.banner-header__icon {
+  @apply text-primary-500 h-12 w-12;
+}
+
+.primary-btn {
+  @apply bg-primary-500 hover:bg-primary-600 rounded-full px-6 py-2 font-semibold text-white transition;
+}

@@ -5,27 +5,27 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 // npx prisma init
 generator client {
-  provider = "prisma-client-js"
-  output   = "./.generated"
+  provider      = "prisma-client-js"
+  output        = "./.generated"
   binaryTargets = ["native", "debian-openssl-3.0.x"]
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
   url      = env("DATABASE_URL")
 }
 
 model User {
-  id            String          @id @default(cuid())
-  name          String?
-  email         String          @unique
-  emailVerified DateTime?
+  id             String          @id @default(cuid())
+  name           String?
+  email          String          @unique
+  emailVerified  DateTime?
   hashedPassword String?
-  image         String?
-  accounts      Account[]
-  sessions      Session[]
+  image          String?
+  accounts       Account[]
+  sessions       Session[]
   // Optional for WebAuthn support
-  Authenticator Authenticator[]
+  Authenticator  Authenticator[]
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

@@ -1,0 +1,24 @@
+@reference "../../../../tailwind.css";
+.nav-item {
+  @apply text-base-0 relative cursor-pointer px-4 py-2 text-xl font-normal transition-all duration-400;
+
+  &:hover {
+    @apply bg-primary-500 rounded;
+  }
+
+  &.active {
+    @apply bg-primary-500 rounded;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+}
+.dropdown {
+  @apply bg-base-1000 absolute left-0 z-10 mt-2 min-w-[150px] rounded p-2 shadow-lg;
+  display: none; // Ẩn mặc định, hiện khi hover (có thể dùng JS hoặc group-hover)
+}
+
+.nav-item:hover .dropdown {
+  display: block;
+}
