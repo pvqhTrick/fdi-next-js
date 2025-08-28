@@ -1,4 +1,4 @@
-export interface AboutSectionProps {
+export interface About2SectionProps {
   subtitle: string;
   icon?: string;
   title: React.ReactNode;

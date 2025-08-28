@@ -1,10 +1,14 @@
+@reference "../../../../tailwind.css";
+
 .about {
-  @apply relative;
+  @apply relative pt-20;
 
   > div {
-    > div {
+    @apply container mx-auto;
+    .row {
+      @apply flex flex-wrap items-center;
       .left {
-        @apply mb-6 w-full px-3 font-serif xl:w-1/2;
+        @apply mb-6 w-1/2 w-full px-3 font-serif xl:w-1/2;
 
         @media (max-width: 1024px) {
           // lg

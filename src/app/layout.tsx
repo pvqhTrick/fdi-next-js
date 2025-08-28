@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
-import { NextIntlClientProvider } from 'next-intl';
 import Script from 'next/script';
 
+import { Homepage } from '@/shared/components/pages/HomePage';
 import '../style.scss';
 import '../tailwind.css';
 import rootMetadata from './metadata';
 
 // Import MainHeader
-import { AboutSection } from '@/shared/components/templates/AboutSection';
-import { MainHeader } from '@/shared/components/templates/MainHeader';
 
 export const metadata: Metadata = rootMetadata;
 
@@ -43,25 +41,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="stylesheet" href="/assets/library/glightbox/glightbox.min.css" />
       </head>
       <body>
-        <NextIntlClientProvider>
-          <MainHeader
-            logoSrc="/assets/images/img-logo.png"
-            bannerTitle="Lorem ipsum dolor sit amet"
-            bannerSubtitle="Welcome to Lorem ipsum."
-            bannerBtnLabel="Lorem ipsum"
-            navItems={[
-              { label: 'Home', links: [{ label: 'Lorem ipsum', href: '#' }] },
-              { label: 'About', links: [{ label: 'Lorem ipsum', href: '#' }] },
-              { label: 'Services', links: [{ label: 'Lorem ipsum', href: '#' }] },
-              { label: 'Projects', links: [{ label: 'Lorem ipsum', href: '#' }] },
-              { label: 'Blog', links: [{ label: 'Lorem ipsum', href: '#' }] },
-              { label: 'Contact', links: [{ label: 'Lorem ipsum', href: '#' }] },
-            ]}
-          />
-
-          <AboutSection></AboutSection>
-          {/* <ProviderRoot>{children}</ProviderRoot> Boc auth de login*/}
-        </NextIntlClientProvider>
+        <Homepage />
         <Script src="/assets/library/imask/imask.min.js" strategy="afterInteractive" />
         <Script src="/assets/library/glightbox/glightbox.min.js" strategy="afterInteractive" />
       </body>

@@ -14,4 +14,5 @@ export enum EIcon {
   Confirm = 'confirm',
   Warning = 'warning',
   Close = 'close',
+  Business = 'business',
 }
