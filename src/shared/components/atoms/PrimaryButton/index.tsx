@@ -1,3 +1,5 @@
+import React from 'react';
+import './style.scss';
 import type { PrimaryButtonProps } from './type';
 
 export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
@@ -5,10 +7,11 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   onClick,
   disabled = false,
   type = 'button',
+  isPrimary = true,
 }) => (
   <button
     type={type}
-    className={`primary-btn ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+    className={`${isPrimary ? 'primary-btn' : 'secondary-btn'}${disabled ? ' opacity-50 cursor-not-allowed' : ''} `}
     onClick={onClick}
     disabled={disabled}>
     {label}

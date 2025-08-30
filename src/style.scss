@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-base-25 text-base-800;
+  @apply bg-base-0 text-base-800;
 }
 
 h1,
@@ -67,7 +67,7 @@ h6 {
 }
 
 .dropdown {
-  @apply bg-base-25 absolute z-30 flex w-44 flex-col rounded p-1 text-sm opacity-0 shadow transition-opacity duration-500 ease-in-out;
+  @apply bg-base-0 absolute z-30 flex w-44 flex-col rounded p-1 text-sm opacity-0 shadow transition-opacity duration-500 ease-in-out;
 
   &.show {
     > a {
@@ -82,8 +82,8 @@ h6 {
 
 // Custom
 .container {
-  max-width: 1220px !important ;
-  @apply mx-auto w-full overflow-hidden pr-3 pl-3;
+  max-width: 1200px !important ;
+  @apply mx-auto w-full overflow-x-hidden;
 }
 
 .navbar-collapse {
@@ -239,6 +239,6 @@ p {
   }
 }
 
-.nav-icon {
-  @apply bg-primary-500 text-base-100 mr-2 flex h-12 w-12 items-center justify-center text-center;
-}
+// .nav-icon {
+//   @apply bg-primary-500 text-base-100 mr-2 flex h-12 w-12 items-center justify-center text-center;
+// }

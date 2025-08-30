@@ -1,4 +1,5 @@
 import { AboutSection } from '../templates/AboutSection';
+import { FunfactSection } from '../templates/FunfactSection';
 import { MainHeader } from '../templates/MainHeader';
 
 export const Homepage: React.FC = () => (
@@ -19,12 +20,38 @@ export const Homepage: React.FC = () => (
     />
 
     <AboutSection
-      title="About Us"
-      content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      imageSrc="/assets/images/img-about.png"
-      imageAlt="About Us"
-      btnLabel="Learn More"
-      btnLink="#"
+      subtitle="What we offer"
+      icon="icon-business"
+      title={
+        <>
+          Crafting unforgettable golf experiences <span>since 1995</span>
+        </>
+      }
+      description="Lorem sit amet risus ac duin auctor posuere ranish the acinia cratusan risus facilis semper etiam fermen."
+      image={{ src: '/assets/images/about-img.png', alt: 'Golf course' }}
+      listItems={['Experienced instructors', 'Professional equipment', 'International tournaments']}
+      variant="withList"
+      reverse={true}
+    />
+
+    <FunfactSection />
+
+    <AboutSection
+      subtitle="What we offer"
+      icon="icon-business"
+      title={
+        <>
+          Crafting unforgettable golf experiences <span>since 1995</span>
+        </>
+      }
+      description="Lorem ipsum dolor sit amet..."
+      image={{ src: '/assets/images/about-img.png' }}
+      signature={{
+        image: '/assets/images/moi_moi-removebg-preview.png',
+        role: 'Founder',
+        name: 'Phan Van Quoc Hung',
+      }}
+      variant="withSignature"
     />
   </>
 );

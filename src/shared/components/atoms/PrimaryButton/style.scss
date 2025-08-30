@@ -1,0 +1,49 @@
+.primary-btn {
+  display: inline-block;
+  height: auto;
+  padding: 17px 34px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 30px;
+  transition:
+    border-color 300ms ease,
+    transform 300ms ease,
+    background-color 300ms ease,
+    color 300ms ease;
+  transform-style: preserve-3d;
+
+  &:hover {
+    background-color: #000;
+    border-color: #000;
+    transform: translate3d(0px, -6px, 0.01px);
+  }
+  @apply bg-primary-500 border-primary-500 border border-solid;
+}
+
+.secondary-btn {
+  display: inline-block;
+  height: auto;
+  padding: 17px 34px;
+  border: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  border-radius: 30px;
+  transition:
+    border-color 300ms ease,
+    transform 300ms ease,
+    background-color 300ms ease,
+    color 300ms ease;
+  transform-style: preserve-3d;
+
+  &:hover {
+    transform: translate3d(0px, -6px, 0.01px);
+    @apply border-primary-500 bg-primary-500;
+  }
+}

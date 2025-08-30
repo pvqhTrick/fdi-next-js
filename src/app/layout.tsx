@@ -40,7 +40,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <link rel="manifest" href="manifest.webmanifest" />
         <link rel="stylesheet" href="/assets/library/glightbox/glightbox.min.css" />
       </head>
-      <body>
+      <body className="overflow-x-hidden">
         <Homepage />
         <Script src="/assets/library/imask/imask.min.js" strategy="afterInteractive" />
         <Script src="/assets/library/glightbox/glightbox.min.js" strategy="afterInteractive" />
