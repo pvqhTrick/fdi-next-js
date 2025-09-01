@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 import { EIcon } from '@/shared/enums';
 import Button from '../../atoms/button';
-import SvgIcon from '../../atoms/svg-icon';
+
+import { SvgIcon } from '../../atoms';
 import './style.scss';
 
 interface ErrorPageProps {

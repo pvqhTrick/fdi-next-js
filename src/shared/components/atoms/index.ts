@@ -3,7 +3,7 @@ import Image from './image';
 import Menu from './menu';
 import Modal from './modal';
 import Spin from './spin';
-import SvgIcon from './svg-icon';
+import { SvgIcon } from './SvgIcon';
 import Tooltip from './tooltip';
 
 export * from './entry';

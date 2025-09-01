@@ -41,7 +41,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
         {/* Cột nội dung */}
         <div className="flex-1" data-animate-effect="fadeInUp">
-          <SectionHeader icon={icon} subtitle={subtitle} />
+          <SectionHeader icon={icon} subtitle={subtitle} title={title} />
           <AboutContent
             title={title}
             description={description}

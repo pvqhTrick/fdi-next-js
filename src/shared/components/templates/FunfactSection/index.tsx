@@ -1,5 +1,4 @@
-// FunfactSection.tsx
-
+'use client';
 import { FunfactItem } from '../../molecules/FunfactItem';
 
 const funfacts = [

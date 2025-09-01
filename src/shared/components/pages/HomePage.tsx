@@ -1,6 +1,7 @@
 import { AboutSection } from '../templates/AboutSection';
 import { FunfactSection } from '../templates/FunfactSection';
 import { MainHeader } from '../templates/MainHeader';
+import { ServiceSection } from '../templates/ServiceSection';
 
 export const Homepage: React.FC = () => (
   <>
@@ -35,6 +36,36 @@ export const Homepage: React.FC = () => (
     />
 
     <FunfactSection />
+
+    <ServiceSection
+      subtitle="Our Services"
+      icon="icon-business"
+      title={
+        <>
+          Explore Our <span>Premium Services</span>
+        </>
+      }
+      services={[
+        {
+          img: '/assets/images/service-1.png',
+          alt: 'service 1',
+          title: 'Golf for Team',
+          desc: 'Lorem sit amet risus the duin aucto miss posuere ranish...',
+        },
+        {
+          img: '/assets/images/service-1.png',
+          alt: 'service 2',
+          title: 'Golf for Ladies',
+          desc: 'Lorem sit amet risus the duin aucto miss posuere ranish...',
+        },
+        {
+          img: '/assets/images/service-1.png',
+          alt: 'service 3',
+          title: 'Golf Pro Lessons',
+          desc: 'Lorem sit amet risus the duin aucto miss posuere ranish...',
+        },
+      ]}
+    />
 
     <AboutSection
       subtitle="What we offer"

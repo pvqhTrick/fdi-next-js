@@ -1,0 +1,76 @@
+@refenrece '../../../../tailwind.css';
+
+.service {
+  @apply bg-base-100 relative px-20;
+
+  .container {
+    @apply mx-auto max-w-7xl px-4;
+
+    .row {
+      @apply justify-center;
+
+      > div {
+        @apply text-center;
+
+        .section-subtitle {
+          @apply mb-4 flex items-center justify-center gap-2 text-lg font-normal text-gray-900 italic;
+
+          > svg {
+            @apply text-primary-500 h-12 w-12;
+          }
+        }
+
+        .section-title {
+          @apply mb-4 text-4xl leading-snug font-medium text-gray-900;
+
+          > span {
+            @apply text-primary-500 font-bold;
+          }
+        }
+      }
+    }
+
+    .content {
+      @apply relative flex justify-between gap-2;
+
+      .item {
+        @apply relative overflow-hidden transition-all duration-500;
+        @apply flex flex-col rounded-xl bg-white shadow-md;
+
+        @apply w-1/4;
+
+        .img {
+          @apply w-full;
+
+          img {
+            @apply block h-auto w-full;
+          }
+        }
+
+        .cont {
+          @apply hidden;
+        }
+
+        &.active {
+          @apply flex w-1/2 flex-row;
+
+          .img {
+            @apply w-1/2;
+          }
+
+          .cont {
+            @apply flex w-1/2 flex-col justify-center px-5 py-4;
+
+            .title {
+              @apply mb-2 text-xl font-bold;
+            }
+
+            p {
+              @apply text-base text-gray-600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

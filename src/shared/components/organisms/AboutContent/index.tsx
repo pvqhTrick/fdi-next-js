@@ -22,7 +22,7 @@ export function AboutContent({
 }: Props) {
   return (
     <div className={className || ''}>
-      <h2 className="section-title text-3xl font-bold mb-4">{title}</h2>
+      {/* <h2 className="section-title text-3xl font-bold mb-4">{title}</h2> */}
 
       <p className="mb-4 text-base text-gray-600">{description}</p>
 
